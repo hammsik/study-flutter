@@ -17,7 +17,7 @@ class SikGradientContainer extends StatelessWidget {
         ),
       ),
       child: const Center(
-        child: SikStyledText("메이플스토리"),
+        child: SikStyledText("메이플스토리끼에엑"),
       ),
     );
   }
