@@ -7,23 +7,23 @@ const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
 class SikGradientContainer extends StatelessWidget {
-  const SikGradientContainer({super.key});
+  final Color startColor, endColor;
+
+  const SikGradientContainer(
+      {required this.startColor, required this.endColor, super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 0, 0, 0),
-            Color.fromARGB(255, 57, 255, 156),
-          ],
+          colors: [startColor, endColor],
           begin: startAlignment,
           end: endAlignment,
         ),
       ),
       child: const Center(
-        child: SikStyledText("HelloMyyyWorld!"),
+        child: SikStyledText("미안해"),
       ),
     );
   }
