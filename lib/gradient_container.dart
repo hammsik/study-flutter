@@ -11,6 +11,9 @@ class SikGradientContainer extends StatelessWidget {
 
   const SikGradientContainer(
       {required this.startColor, required this.endColor, super.key});
+  const SikGradientContainer.purple()
+      : startColor = Colors.deepPurple,
+        endColor = Colors.indigo;
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +25,8 @@ class SikGradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: const Center(
-        child: SikStyledText("미안해"),
+      child: Center(
+        child: Image.asset('assets/dice-images/dice-3.png'),
       ),
     );
   }

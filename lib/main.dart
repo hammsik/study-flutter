@@ -5,9 +5,7 @@ void main() {
   runApp(
     const MaterialApp(
       home: Scaffold(
-        body: SikGradientContainer(
-            startColor: Color.fromARGB(255, 84, 150, 255),
-            endColor: Color.fromARGB(255, 255, 255, 255)),
+        body: SikGradientContainer.purple(),
       ),
     ),
   );
