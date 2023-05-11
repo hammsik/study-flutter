@@ -10,15 +10,9 @@ class SikStyledText extends StatelessWidget {
     return Text(
       text,
       style: const TextStyle(
-        fontSize: 50,
+        fontSize: 20,
         color: Color.fromARGB(255, 255, 255, 255),
         fontWeight: FontWeight.bold,
-        shadows: [
-          Shadow(
-            blurRadius: 100,
-            color: Color.fromARGB(255, 0, 0, 0),
-          ),
-        ],
       ),
     );
   }
