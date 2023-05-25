@@ -15,7 +15,10 @@ class SikStyledButton extends StatelessWidget {
       this.height = 40,
       this.borderRadius,
       this.gradient = const LinearGradient(
-        colors: [Colors.cyan, Colors.indigo],
+        colors: [
+          Colors.cyan,
+          Color.fromARGB(255, 249, 130, 255),
+        ],
       ),
       super.key});
 
@@ -25,6 +28,7 @@ class SikStyledButton extends StatelessWidget {
     return Container(
       width: width,
       height: height,
+      margin: const EdgeInsets.all(50),
       decoration: BoxDecoration(
         gradient: gradient,
         borderRadius: borderRadius,
