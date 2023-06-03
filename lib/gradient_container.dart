@@ -39,7 +39,14 @@ class SikGradientContainer extends StatelessWidget {
             SikStyledButton(
               onPressed: () {},
               borderRadius: BorderRadius.circular(20),
-              text: const SikStyledText("roll dice"),
+              text: const Text(
+                "roll dice",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  backgroundColor: Colors.transparent,
+                ),
+              ),
             ),
           ],
         ),
