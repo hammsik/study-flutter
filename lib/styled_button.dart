@@ -12,7 +12,7 @@ class SikStyledButton extends StatelessWidget {
       {required this.onPressed,
       required this.text,
       this.width = double.infinity,
-      this.height = 40,
+      this.height = 20,
       this.borderRadius,
       this.gradient = const LinearGradient(
         colors: [Colors.cyan, Colors.indigo],
@@ -24,7 +24,8 @@ class SikStyledButton extends StatelessWidget {
     final borderRadius = this.borderRadius ?? BorderRadius.circular(0);
     return Container(
       width: width,
-      height: height,
+      padding: EdgeInsets.all(20),
+      margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
       decoration: BoxDecoration(
         gradient: gradient,
         borderRadius: borderRadius,
@@ -32,7 +33,6 @@ class SikStyledButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.transparent,
           shape: RoundedRectangleBorder(borderRadius: borderRadius),
         ),
         child: text,
