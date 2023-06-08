@@ -11,20 +11,20 @@ class SikStyledButton extends StatelessWidget {
   const SikStyledButton(
       {required this.onPressed,
       required this.text,
-      this.width = double.infinity,
-      this.height = 20,
-      this.borderRadius,
+      required this.width,
+      required this.height,
+      this.borderRadius, // 수정 필요!
       this.gradient = const LinearGradient(
         colors: [
-          Color.fromARGB(255, 7, 197, 255),
-          Color.fromARGB(255, 249, 130, 255),
+          Color.fromARGB(255, 0, 0, 0),
+          Color.fromARGB(255, 0, 0, 0),
         ],
       ),
       super.key});
 
   @override
   Widget build(BuildContext context) {
-    final borderRadius = this.borderRadius ?? BorderRadius.circular(0);
+    final borderRadius = this.borderRadius ?? BorderRadius.circular(0); // 수정필요
     return Container(
       margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
       decoration: BoxDecoration(
@@ -32,8 +32,8 @@ class SikStyledButton extends StatelessWidget {
         borderRadius: borderRadius,
       ),
       child: SizedBox(
-        width: double.infinity,
-        height: 100,
+        width: width,
+        height: height,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(borderRadius: borderRadius),

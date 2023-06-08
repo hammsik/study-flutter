@@ -11,7 +11,6 @@ class SikStyledText extends StatelessWidget {
       text,
       style: const TextStyle(
         fontSize: 20,
-        color: Color.fromARGB(255, 255, 255, 255),
         fontWeight: FontWeight.bold,
       ),
     );
