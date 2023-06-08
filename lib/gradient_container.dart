@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:first_app/styled_text.dart';
-import 'package:first_app/styled_button.dart';
+import 'package:first_app/dice_roller.dart';
 
 // 런타임에 절대 바뀌지 않는, 컴파일 타임부터 잠겨있는 코드
 // final은, 만약 어떤 클래스를 인스턴스화 해서 변수에 할당하는 것처럼, 컴파일 타임에는 적용되지 않지만, 런타임에 한 번 할당되면 더이상 바뀌지 않는 코드에 쓰임
@@ -13,10 +12,8 @@ class SikGradientContainer extends StatelessWidget {
   const SikGradientContainer(
       {required this.startColor, required this.endColor, super.key});
   const SikGradientContainer.purple({super.key})
-      : startColor = Colors.deepPurple,
+      : startColor = const Color.fromARGB(255, 134, 0, 146),
         endColor = Colors.indigo;
-
-  void rollDice() {}
 
   @override
   Widget build(BuildContext context) {
@@ -28,28 +25,8 @@ class SikGradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset(
-              'assets/dice-images/dice-3.png',
-              width: 200,
-            ),
-            SikStyledButton(
-              onPressed: () {},
-              borderRadius: BorderRadius.circular(20),
-              text: const Text(
-                "roll dice",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  backgroundColor: Colors.transparent,
-                ),
-              ),
-            ),
-          ],
-        ),
+      child: const Center(
+        child: DiceRoller(),
       ),
     );
   }

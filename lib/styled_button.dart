@@ -31,15 +31,18 @@ class SikStyledButton extends StatelessWidget {
         gradient: gradient,
         borderRadius: borderRadius,
       ),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(borderRadius: borderRadius),
-          backgroundColor: Colors.transparent,
-          shadowColor: Colors.transparent,
-          minimumSize: const Size(double.infinity, 100),
+      child: SizedBox(
+        width: double.infinity,
+        height: 100,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(borderRadius: borderRadius),
+            backgroundColor: Colors.transparent,
+            shadowColor: Colors.transparent,
+          ),
+          onPressed: onPressed,
+          child: text,
         ),
-        onPressed: onPressed,
-        child: text,
       ),
     );
   }
