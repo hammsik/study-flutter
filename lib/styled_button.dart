@@ -26,23 +26,27 @@ class SikStyledButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final borderRadius = this.borderRadius ?? BorderRadius.circular(0); // 수정필요
     return Container(
+      width: width,
+      height: height,
       margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
       decoration: BoxDecoration(
-        gradient: gradient,
-        borderRadius: borderRadius,
-      ),
-      child: SizedBox(
-        width: width,
-        height: height,
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            shape: RoundedRectangleBorder(borderRadius: borderRadius),
-            backgroundColor: Colors.transparent,
-            shadowColor: Colors.transparent,
-          ),
-          onPressed: onPressed,
-          child: text,
+          gradient: gradient,
+          borderRadius: borderRadius,
+          boxShadow: const [
+            BoxShadow(
+              offset: Offset(5, 5),
+              spreadRadius: -5,
+              blurRadius: 25,
+            )
+          ]),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(borderRadius: borderRadius),
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
         ),
+        onPressed: onPressed,
+        child: text,
       ),
     );
   }
