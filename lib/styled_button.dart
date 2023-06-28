@@ -26,8 +26,6 @@ class SikStyledButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final borderRadius = this.borderRadius ?? BorderRadius.circular(0); // 수정필요
     return Container(
-      width: width,
-      height: height,
       margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
       decoration: BoxDecoration(
           gradient: gradient,
@@ -36,7 +34,7 @@ class SikStyledButton extends StatelessWidget {
             BoxShadow(
               offset: Offset(5, 5),
               spreadRadius: -5,
-              blurRadius: 25,
+              blurRadius: 40,
             )
           ]),
       child: ElevatedButton(
@@ -44,6 +42,7 @@ class SikStyledButton extends StatelessWidget {
           shape: RoundedRectangleBorder(borderRadius: borderRadius),
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
+          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
         ),
         onPressed: onPressed,
         child: text,

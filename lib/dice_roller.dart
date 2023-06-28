@@ -36,7 +36,7 @@ class _DiceRollerState extends State<DiceRoller> {
           ),
         ),
         SikStyledButton(
-          text: const SikStyledText('동의'),
+          text: const SikStyledText('주사위 던지기'),
           width: double.infinity,
           height: 100,
           gradient: const LinearGradient(
@@ -49,7 +49,7 @@ class _DiceRollerState extends State<DiceRoller> {
           onPressed: rollDice,
         ),
         SikStyledButton(
-          text: const SikStyledText('동의'),
+          text: const SikStyledText('주사위 던지기'),
           width: double.infinity,
           height: 100,
           gradient: const LinearGradient(
